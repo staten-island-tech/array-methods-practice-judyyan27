@@ -9,10 +9,10 @@ const products = [
   { name: "Desk", price: 450, category: "Furniture", rating: 4.8 },
 ];
 
-//products.forEach((product) => console.log(product.name, product.price));
+products.forEach((product) => console.log(product.name, product.price));
 //Part 1a
 
-//products.forEach((product) => console.log(product.name, product.price * 1.1));
+products.forEach((product) => console.log(product.name, product.price * 1.1));
 //Part 1b
 
 const categories = [];
@@ -38,6 +38,14 @@ const highratedproducts = products.filter((product) => product.rating >= 4.5);
 console.log("Highly Rated Products:", highratedproducts);
 // Part 2c
 
-highratedproducts
-  .filter((highratedproducts) => highratedproducts.rating < 4.5)
-  .forEach((highratedproducts) => console.log(highratedproducts.name));
+products
+  .filter((product) => product.rating >= 4.5)
+  .forEach((product) => console.log("Product Rating Above 4.5:", product.name));
+// Part 3a
+
+products
+  .filter((product) => product.price < 1000)
+  .forEach((product) =>
+    console.log("Product Price less than 1000:", product.name)
+  );
+// Part 3a
